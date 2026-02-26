@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+.container{
+    width: 70%;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border-left: 3px solid #18a8cc;
+    border-right: 3px solid #18a8cc;
+    border-top: 1px solid #18a8cc;
+    border-bottom: 5px solid #18a8cc;
+}
+.container h1{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;;
+}
+.content{
+    display: flex;
+    gap : 120px;
+}
+.card{
+    flex: 1;
+    padding: 40px 30px;
+    aspect-ratio: 1/1;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.card h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    line-height:1.4;
+}
+.text p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.author{
+    margin-top: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.job{
+    color: #0848a1;
+}
+.text{
+    flex:2;
+}
+.text strong{
+    display: block;
+    margin-bottom: 20px;
+}
