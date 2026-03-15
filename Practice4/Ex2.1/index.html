@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Đăng ký tài khoản</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="fullname">Họ và tên</label>
+                <input type="text" id="fullname">
+                <small class="error" id="fullnameerror"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email">
+                <small class="error" id="emailerror"></small>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số điện thoại</label>
+                <input type="text" id="phone">
+                <small class="error" id="phoneerror"></small>
+            </div>
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <input type="password" id="password">
+                <small class="error" id="passworderror"></small>
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Xác nhận mật khẩu</label>
+                <input type="password" id="confirmPassword">
+                <small class="error" id="confirmPassworderror"></small>
+            </div>
+            <div class="form-group">
+                <label>Giới tính</label><br>
+                <input type="radio" name="gender" value="Nam"> Nam
+                <input type="radio" name="gender" value="Nữ"> Nữ
+                <small class = "error" id="gendererror"></small>
+            </div>
+            <div class = "form-group">
+                <input type="checkbox" id="terms"> Tôi đồng ý với các điều khoản</input>
+                <small class="error" id="termserror"></small>
+            </div>
+                <button type="submit">Đăng ký</button>
+        </form>
+        <div id="successMessage"></div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
