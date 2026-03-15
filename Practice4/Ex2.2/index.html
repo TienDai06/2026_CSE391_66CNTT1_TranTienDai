@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container"> 
+        <h2>Form Đặt Hàng</h2>
+        <form id="orderForm">
+            <label for="product">Tên sản phẩm</label>
+            <select id="product">
+                <option value="">-- Chọn sản phẩm</option>
+                <option value="Ao">-- Áo</option>
+                <option value="Quan">-- Quần</option>
+                <option value="Giay">-- Giày</option>
+            </select>
+            <div class="error" id="productError"></div>
+
+            <label for="quantity">Số lượng</label>
+            <input type="number" id="quantity" name="quantity">
+            <div class="error" id="quantityError"></div>
+            
+            <label for="deliveryDate">Ngày giao hàng</label>
+            <input type="date" id="deliveryDate" name="deliveryDate">
+            <div class="error" id="dateError"></div>
+            
+            <label for="address">Địa chỉ</label>
+            <input type="text" id="address" name="address">
+            <div class="error" id="addressError"></div>
+
+            <label for="note">Ghi chú</label>
+            <textarea id="note"></textarea>
+            <div id="charCount">0/200</div>
+            <div class="error" id="noteError"></div>
+
+            <label for="payment">Phương thức thanh toán</label>
+            <input type="radio" name="payment" value="COD"> COD
+            <input type="radio" name="payment" value="Bank"> Chuyển khoản
+            <input type="radio" name="payment" value="Wallet"> Ví điện tử
+            <div class="error" id="paymentError"></div>
+            <h3>Tổng tiền: <span id="total">0</span> VNĐ</h3>
+
+            <button type="submit">Đặt hàng</button>
+        </form>
+        <div id="confirmBox" style="display:none;">
+                <h3>Xác nhận đơn hàng</h3>
+                <p id="summary"></p>
+                <button id="confirmBtn">Xác nhận</button>
+                <button id="cancelBtn">Hủy</button>
+        </div>
+        <div id="success"></div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
