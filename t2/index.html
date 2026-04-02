@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quản lý sách</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="form.css" />
+
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">Quản lý sách</div>
+      <nav>
+        <a href="#" class="nav-item active">Bảng điều khiển</a>
+        <a href="#" class="nav-item">Danh sách sách</a>
+        <a href="#" class="nav-item">Thêm mới</a>
+        <a href="#" class="nav-item">Báo cáo</a>
+      </nav>
+      <div class="footer">© 2026</div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <h1>Danh sách sách trong kho</h1>
+        <input type="text" placeholder="Tìm sách..." class="search"/>
+      </header>
+
+      <section class="card">
+        <div class="card-header">
+          <h2>Danh sách sách trong kho</h2>
+          <button id="btnAdd" class="btn btn-success">Thêm sách mới</button>
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Tên sách</th>
+                <th>Danh mục</th>
+                <th>Nội dung</th>
+                <th>Chủ đề</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody id = "tableBody">
+              <!-- Dữ liệu sẽ được JavaScript thêm vào từ data.js --> 
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Thêm sách mới</h3>
+        <button id="closeModal" class="close-btn">×</button>
+      </div>
+      <form id="employeeForm" class="modal-body" novalidate>
+        <div class="form-row">
+          <label for="name">Tên sách <span class="required">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Nhập tên sách" maxlength="30" required />
+          <span id="nameError" class="error-message"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="category">Chủ đề <span class="required">*</span></label>
+          <select id="category" name="category" required>
+            <option value="">-- Chọn chủ đề --</option>
+            <option value="Công nghệ">Công nghệ</option>
+            <option value="Khoa học">Khoa học</option>
+            <option value="Lịch sử">Lịch sử</option>
+            <option value="Nghệ thuật">Nghệ thuật</option>
+            <option value="Phát triển bản thân">Phát triển bản thân</option>
+          </select>
+          <span id="categoryError" class="error-message"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="content">Nội dung <span class="required">*</span></label>
+          <input type="text" id="content" name="content" placeholder="Nhập nội dung" required />
+          <span id="contentError" class="error-message"></span>
+        </div>
+
+        <div class="form-row">
+          <label for="topic">Chủ đề <span class="required">*</span></label>
+          <select id="topic" name="topic" required>
+            <option value="">-- Chọn chủ đề --</option>
+            <option value="Lập trình">Lập trình</option>
+            <option value="Dữ liệu">Dữ liệu</option>
+            <option value="Lịch sử">Lịch sử</option>
+            <option value="Thiết kế">Thiết kế</option>
+            <option value="Self-help">Self-help</option>
+          </select>
+          <span id="topicError" class="error-message"></span>
+        </div>
+        
+        <div class="modal-footer full-row">
+          <button type="submit" class="btn save">Lưu</button>
+          <button type="button" id="cancelBtn" class="btn cancel">Hủy</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

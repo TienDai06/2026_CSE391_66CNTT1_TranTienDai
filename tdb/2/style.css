@@ -1,0 +1,327 @@
+/* Reset mặc định cho gọn gàng */
+* {
+    margin: 0; /* bỏ khoảng cách mặc định */
+    padding: 0; /* bỏ padding mặc định */
+    box-sizing: border-box; /* tính cả padding + border vào width/height */
+}
+
+/* Style chung cho body */
+body {
+    font-family: Arial, sans-serif; /* font chữ */
+    background: #f4f6f8; /* màu nền nhẹ */
+}
+
+/* ===== HEADER (Flexbox) ===== */
+.header {
+    display: flex; /* bật flexbox */
+    justify-content: space-between; /* đẩy 2 bên ra xa */
+    align-items: center; /* căn giữa theo chiều dọc */
+    padding: 15px 30px; /* khoảng cách trong */
+    background: #3c6ef8; /* màu nền */
+    color: white; /* chữ trắng */
+}
+
+/* Menu nav */
+.nav a {
+    margin-left: 15px; /* cách nhau */
+    text-decoration: none; /* bỏ gạch chân */
+    color: white; /* màu chữ */
+    font-weight: bold; /* chữ đậm */
+}
+
+/* Hover vào menu */
+.nav a:hover {
+    text-decoration: underline; /* gạch chân khi hover */
+}
+
+/* ===== LAYOUT CHÍNH (Grid) ===== */
+.container {
+    display: grid; /* bật grid */
+    grid-template-columns: 250px 1fr; 
+    /* 2 cột: sidebar 250px, content chiếm phần còn lại */
+
+    gap: 20px; /* khoảng cách giữa các cột */
+    padding: 20px; /* khoảng cách toàn layout */
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    background: white; /* nền trắng */
+    padding: 15px; /* khoảng cách trong */
+    border-radius: 10px; /* bo góc */
+}
+
+/* list trong sidebar */
+.sidebar ul {
+    list-style: none; /* bỏ dấu chấm */
+}
+
+.sidebar li {
+    margin: 10px 0; /* cách các item */
+}
+
+/* ===== CONTENT ===== */
+.content {
+    background: white; /* nền trắng */
+    padding: 15px; /* khoảng cách */
+    border-radius: 10px; /* bo góc */
+}
+
+/* ===== CARD LIST (Flexbox) ===== */
+.card-list {
+    display: flex; /* flexbox */
+    gap: 10px; /* khoảng cách giữa card */
+    flex-wrap: wrap; 
+    /* xuống dòng nếu không đủ chỗ */
+    margin: 15px 0;
+}
+
+/* từng card */
+.card {
+    background: #3c6ef8; /* màu nền */
+    color: white; /* chữ trắng */
+    padding: 20px; /* khoảng cách trong */
+    border-radius: 8px; /* bo góc */
+
+    flex: 1 1 120px; 
+    /* 
+    flex-grow: 1 (giãn ra)
+    flex-shrink: 1 (co lại)
+    flex-basis: 120px (kích thước tối thiểu)
+    */
+    
+    text-align: center; /* căn giữa chữ */
+}
+
+/* hover card */
+.card:hover {
+    background: #2a57d4; /* đổi màu khi hover */
+}
+
+/* ===== GRID BOX ===== */
+.grid-box {
+    display: grid; /* bật grid */
+    grid-template-columns: repeat(3, 1fr); 
+    /* 3 cột bằng nhau */
+    
+    gap: 10px; /* khoảng cách */
+    margin-top: 20px;
+}
+
+/* từng ô grid */
+.grid-item {
+    background: #e03a3a; /* màu đỏ */
+    color: white; /* chữ trắng */
+    padding: 20px; /* khoảng cách */
+    text-align: center; /* căn giữa */
+    border-radius: 8px; /* bo góc */
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center; /* căn giữa */
+    padding: 15px;
+    background: #1c2a3a; /* màu tối */
+    color: white;
+    margin-top: 20px;
+}
+
+/* ===== RESPONSIVE (Mobile) ===== */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; 
+        /* chuyển về 1 cột */
+    }
+
+    .header {
+        flex-direction: column; 
+        /* xếp dọc */
+        align-items: flex-start;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+}
+
+
+
+/* Bản 2 */
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: Arial;
+    background: #f4f6f8;
+}
+
+/* ===== HEADER FLEX NÂNG CAO ===== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #3c6ef8;
+    color: white;
+}
+
+/* logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* nav */
+.nav {
+    display: flex; /* flex ngang */
+    gap: 15px; /* cách đều */
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ===== GRID LAYOUT NÂNG CAO ===== */
+.container {
+    display: grid;
+
+    grid-template-areas: 
+        "sidebar content"
+        "sidebar content";
+    /* đặt tên vùng */
+
+    grid-template-columns: 220px 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* gán vùng */
+.sidebar {
+    grid-area: sidebar;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.content {
+    grid-area: content;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* ===== FLEX CARD NÂNG CAO ===== */
+.card-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    /* chia đều */
+}
+
+.card {
+    flex: 1 1 calc(25% - 15px); 
+    /* 4 card 1 hàng */
+    
+    background: #3c6ef8;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* ===== GRID AUTO-FIT (RẤT HAY RA THI) ===== */
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* tự co giãn */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.auto-item {
+    background: #00b894;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* ===== CENTER (CĂN GIỮA CHUẨN THI) ===== */
+.center-box {
+    display: flex;
+    justify-content: center; /* ngang */
+    align-items: center; /* dọc */
+    height: 150px;
+    background: #ffeaa7;
+    margin-top: 20px;
+}
+
+/* ===== FLEX COLUMN ===== */
+.flex-column {
+    display: flex;
+    flex-direction: column; /* chuyển sang cột */
+    gap: 10px;
+}
+
+.flex-column div {
+    background: #6c5ce7;
+    color: white;
+    padding: 10px;
+}
+
+/* ===== GRID SPAN ===== */
+.grid-span {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.grid-span div {
+    background: #d63031;
+    color: white;
+    padding: 20px;
+}
+
+/* item to hơn */
+.grid-span .big {
+    grid-column: span 2; 
+    /* chiếm 2 cột */
+}
+
+/* ===== STICKY SIDEBAR (RẤT HAY RA) ===== */
+.sidebar {
+    position: sticky;
+    top: 10px; 
+    /* dính khi scroll */
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #1c2a3a;
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas: 
+            "content"
+            "sidebar";
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        flex: 1 1 100%; 
+        /* 1 card 1 hàng */
+    }
+}

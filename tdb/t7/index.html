@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabs</title>
+
+  <!-- CSS riêng -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Tabs</h2>
+  <p>Click vào các nút để chuyển nội dung</p>
+</div>
+
+<!-- Thanh tab -->
+<div class="tab-bar">
+  <button class="tab-btn" onclick="openCity('London')">London</button>
+  <button class="tab-btn" onclick="openCity('Paris')">Paris</button>
+  <button class="tab-btn" onclick="openCity('Tokyo')">Tokyo</button>
+</div>
+
+<!-- Nội dung -->
+<div id="London" class="tab-content">
+  <h2>London</h2>
+  <p>London là thủ đô của Anh.</p>
+</div>
+
+<div id="Paris" class="tab-content" style="display:none">
+  <h2>Paris</h2>
+  <p>Paris là thủ đô của Pháp.</p>
+</div>
+
+<div id="Tokyo" class="tab-content" style="display:none">
+  <h2>Tokyo</h2>
+  <p>Tokyo là thủ đô của Nhật.</p>
+</div>
+
+<!-- JS riêng -->
+<script src="script.js"></script>
+</body>
+</html>

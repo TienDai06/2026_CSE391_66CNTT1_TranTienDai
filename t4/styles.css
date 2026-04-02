@@ -1,0 +1,597 @@
+/* ===========================
+   GENERAL STYLES
+   =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===========================
+   HEADER STYLES
+   =========================== */
+.header {
+    background-color: #4a6fa5;
+    color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.search-bar {
+    display: flex;
+    gap: 8px;
+}
+
+.search-bar input {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    font-size: 14px;
+}
+
+.search-bar input:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
+
+.search-btn {
+    padding: 8px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #1a252f;
+}
+
+/* ===========================
+   MAIN CONTENT STYLES
+   =========================== */
+.main-content {
+    padding: 30px;
+    flex: 1;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.section-header h2 {
+    font-size: 22px;
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* ===========================
+   BUTTON STYLES
+   =========================== */
+.btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn .icon {
+    font-size: 16px;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+.btn-success {
+    background-color: #27ae60;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(39, 174, 96, 0.3);
+}
+
+.btn-secondary {
+    background-color: #bdc3c7;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #a6b0b8;
+}
+
+.btn-edit {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.btn-edit:hover {
+    background-color: #ecf0f1;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.btn-delete:hover {
+    background-color: #fadbd8;
+}
+
+/* ===========================
+   TABLE STYLES
+   =========================== */
+.employees-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.employees-table thead {
+    background-color: #34495e;
+    color: white;
+}
+
+.employees-table th {
+    padding: 14px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+.employees-table tbody tr {
+    border-bottom: 1px solid #ecf0f1;
+    transition: background-color 0.2s;
+}
+
+.employees-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.employees-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.employees-table td {
+    padding: 14px 12px;
+    font-size: 14px;
+    color: #555;
+}
+
+.employees-table input[type="checkbox"] {
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+}
+
+.employees-table th input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* ===========================
+   PAGINATION STYLES
+   =========================== */
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    flex-wrap: wrap;
+}
+
+.pagination-info {
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.pagination-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.pagination-btn {
+    padding: 8px 16px;
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.3s;
+}
+
+.pagination-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination-page {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    color: #555;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    min-width: 36px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.pagination-page:hover {
+    background-color: #e0e0e0;
+}
+
+.pagination-page.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.pagination-page.active:hover {
+    background-color: #2980b9;
+}
+
+/* ===========================
+   MODAL/POPUP STYLES
+   =========================== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    z-index: 101;
+    width: 90%;
+    max-width: 400px;
+    animation: slideIn 0.3s ease-out;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -55%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.modal-overlay.show {
+    display: block;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.modal-header h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: color 0.3s;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close:hover {
+    color: #2c3e50;
+}
+
+.modal-content {
+    padding: 0;
+}
+
+/* ===========================
+   FORM STYLES
+   =========================== */
+.form {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 4px rgba(52, 152, 219, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+.error-message {
+    display: block;
+    color: #c0392b;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    min-height: 18px;
+    letter-spacing: 0.3px;
+}
+
+.error-banner {
+    background-color: #fadbd8;
+    border: 2px solid #e74c3c;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.error-banner.show {
+    display: flex;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.error-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.error-content h4 {
+    color: #c0392b;
+    margin: 0 0 8px 0;
+    font-size: 14px;
+}
+
+.error-content ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style: disc;
+}
+
+.error-content li {
+    color: #c0392b;
+    font-size: 13px;
+    margin: 3px 0;
+}
+
+.form-group input.has-error,
+.form-group textarea.has-error {
+    border-color: #e74c3c !important;
+    background-color: #fadbd8;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #ecf0f1;
+}
+
+.form-actions button {
+    flex: 1;
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .search-bar input {
+        flex: 1;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .action-buttons {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .action-buttons button {
+        width: 100%;
+    }
+
+    .employees-table {
+        font-size: 12px;
+    }
+
+    .employees-table th,
+    .employees-table td {
+        padding: 10px 8px;
+    }
+
+    .modal {
+        width: 95%;
+        max-width: none;
+    }
+
+    .pagination {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pagination-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 15px;
+    }
+
+    .employees-table {
+        font-size: 11px;
+        overflow-x: auto;
+    }
+
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .section-header h2 {
+        font-size: 18px;
+    }
+
+    .modal {
+        width: 95%;
+    }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh sách giao dịch</title>
+  <link rel="stylesheet" href="style-main.css" />
+  <link rel="stylesheet" href="style-form.css" />
+
+</head>
+<body>
+  <header class="header">
+    <div class="top-nav">
+      <div class="brand">Trường Đại học Thủy lợi</div>
+      <nav class="nav-links">
+        <a href="#">Trang chủ</a>
+        <a href="#">Quản lý cửa hàng</a>
+      </nav>
+      <div class="top-search">
+        <input type="text" placeholder="Nhập nội dung tìm kiếm" />
+        <button class="btn btn-search">TÌM KIẾM</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <div class="left-actions">
+        <button id="addBtn" class="btn btn-add">THÊM</button>
+        <button id="exportBtn" class="btn btn-export">XUẤT RA FILE</button>
+      </div>
+      <div class="right-actions">
+        <div class="search">
+          <input id="quickSearch" type="text" placeholder="Tìm kiếm giao dịch" />
+          <button class="btn btn-search">🔍</button>
+        </div>
+        <div class="result-size">
+          Kết quả
+          <select>
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th><input id="selectAll" type="checkbox" title="Chọn tất cả" /></th>
+            <th>Hành động</th>
+            <th>ID</th>
+            <th>Khách hàng</th>
+            <th>Nhân viên</th>
+            <th>Số tiền</th>
+            <th>Ngày mua</th>
+          </tr>
+        </thead>
+        <tbody id="transactionTableBody">
+          <!-- Data will be rendered here -->
+        </tbody>
+      </table>
+      <div class="table-footer">
+        <div class="pagination">
+          <span class="page active">1</span>
+          <span class="page">2</span>
+          <span class="page">3</span>
+          <span class="page">4</span>
+          <span class="page">5</span>
+          <span class="page">6</span>
+          <span class="page">»</span>
+          <span class="page">»»</span>
+        </div>
+        <div class="summary">Kết quả 1 trong 20 trang</div>
+      </div>
+    </section>
+  </main>
+
+  <div id="overlay" class="overlay hidden"></div>
+  <div id="modal" class="modal hidden">
+
+    <form class="modal-form">    
+      <div class="modal-header">
+        <h2>Thêm giao dịch</h2>
+        <button id="closeModal" class="close">×</button>
+      </div>
+      <div class="field"><label>Khách hàng</label><input id="customer" type="text" placeholder="Tên khách hàng" required maxlength="30" /></div>
+      <div class="field"><label>Nhân viên</label><input id="employee" type="text" placeholder="Tên nhân viên" required maxlength="30" /></div>
+      <div class="field"><label>Số tiền</label><input id="amount" type="text" placeholder="Số tiền" required /></div>
+      <div class="field"><label>Ghi chú</label><input id="note" type="text" placeholder="Ghi chú bổ sung" /></div>
+      <div class="buttons">
+        <button type="button" id="cancelBtn" class="btn btn-cancel">Hủy</button>
+        <button type="submit" class="btn btn-add">Thêm</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Địa chỉ: 175 Tây Sơn, Đống Đa, Hà Nội | Điện thoại: (024) 38522201 | Email: phongthctt@tlu.edu.vn</p>
+    </div>
+  </footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

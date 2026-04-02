@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Danh sách giao dịch</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <header class="header">
+    <div class="top-nav">
+      <div class="brand">Conference Hub</div>      
+      <div class="top-search">
+        <input type="text" placeholder="Quick search..." />
+        <!-- <button class="btn btn-search"></button> -->
+
+      </div>
+      <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">List</a>
+        <button id="addBtn" class="btn btn-add">Add new</button>
+        <a href="#">About</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="toolbar">
+      <div class="left-actions">
+        <button id="addBtn" class="btn btn-add">+Add new</button>
+      </div>        
+      <div class="result-size">
+          Location
+          <select>
+            <option>All</option>
+            <option>10</option>
+            <option>15</option>
+          </select>
+        </div>
+      <div class="right-actions">
+        <div class="search">
+            Filter list
+          <input id="quickSearch" type="text" placeholder="Type to filter table..." />
+          
+        </div>
+
+      </div>
+    </section>
+
+    <section class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Conference name</th>
+            <th>Speaker</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody id="transactionTableBody">
+          <!-- Data will be rendered here -->
+        </tbody>
+      </table>
+      </div>
+    </section>
+  </main>
+
+  <div id="overlay" class="overlay hidden"></div>
+  <div id="modal" class="modal hidden">
+
+    <form class="modal-form">    
+      <div class="modal-header">
+        <h2>Add new conference</h2>
+        <button id="closeModal" class="close">×</button>
+      </div>
+      <div class="field"><label>Conference name</label><input id="customer" type="text" placeholder="Event title" required  /></div>
+      <div class="field"><label>Speaker</label><input id="employee" type="text" placeholder="Speaker name" required  /></div>
+      <div class="field"><label>Email</label><input id="email" type="emal" placeholder="email@example.com" required /></div>
+      <div class="field"><label>Date</label><input id="date" type="date"  /></div>
+      <div class="field"><label>Location</label><input id="location" type="text" placeholder="Venue or address" /></div>
+      <div class="buttons">
+        <button type="button" id="cancelBtn" class="btn btn-cancel">Hủy</button>
+        <button type="submit" class="btn btn-add">Thêm</button>
+      </div>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Conference Hub</p>
+      <p>Student ID-CSE391 Exam 3-2026</p>
+    </div>
+  </footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
