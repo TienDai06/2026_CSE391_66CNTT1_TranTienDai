@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <div>
+            <header>
+                <h1>HR Management</h1>
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#">Contact</a>
+                </nav>
+                <input type="text" placeholder="Search...">
+                <button>Submit</button>
+            </header>
+            <div>
+                <div>
+                    <h2>Employee</h2>
+                    <button>+Add</button>
+                </div>
+                <table width="100%" cellspacing="0" cellpadding="5">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Position</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>John Doe</td>
+                            <td>john.doe@example.com</td>
+                            <td>1234567890</td>
+                            <td>Staff</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Jane Smith</td>
+                            <td>jane.smith@example.com</td>
+                            <td>0987654321</td>
+                            <td>Staff</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mike Johnson</td>
+                            <td>mike.johnson@example.com</td>
+                            <td>4566324567533</td>
+                            <td>Staff</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Emily Davis</td>
+                            <td>emily.davis@example.com</td>
+                            <td>04735325356</td>
+                            <td>Manager</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                        </tr>
+                            <td>5</td>
+                            <td>David Wilson</td>
+                            <td>david.wilson@example.com</td>
+                            <td>098384738</td>
+                            <td>Staff</td>
+                            <td>
+                                <button>Edit</button>
+                                <button>Delete</button>
+                            </td>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <thead>
+                <h2>New Employee</h2>
+            </thead>
+            <form>
+                <div>
+                    <label for="name">Name</label><br>
+                    <input type="text" id="name" name="name" required><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required><br>
+                    <label for="phone">Phone</label><br>
+                    <input type="text" id="phone" name="phone" required><br>
+                    <label for="position">Position</label><br>
+                    <select name="position">
+                        <option>--Select Position--</option>
+                        <option>Staff</option>
+                        <option>Manager</option>
+                        <option>CEO</option>
+                    </select><br>
+                    <label for="sex">Sex</label><br>
+                    <input type="radio" name="sex">Male
+                    <input type="radio" name="sex">Female
+
+                </div>
+            </form>
+            <button type="submit">Submit</button>
+            <button type="Cancel">Cancel</button>
+        </div>
+    </div>
+</body>
+</html>
